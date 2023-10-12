@@ -17,7 +17,7 @@ exports.datosAgregados = async (frase, reaccion, colorfondo, colorLetra, ip, can
 
     return resultado;
   } catch (error) {
-    throw error;
+    return error.message;
   }
 };
 
