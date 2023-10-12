@@ -14,7 +14,13 @@ async function agregarDatoUsuario(frase, reaccion, colorfondo, colorLetra, ip, c
     });
 
     const resultado = await nuevoDatoUsuario.save();
-    return resultado;
+    if (resultado) {
+
+      return '¡Registro guardado correctamente!';
+    } else {
+
+      return 'Ocurrió un error al guardar el registro.';
+    }
   } catch (error) {
     throw error;
   }
